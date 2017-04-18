@@ -56,9 +56,35 @@
 
   <br><br>
 
+<!--
+<input  type="text"
+(keyup.enter)="salvarValor($event.target.value)"
+(blur)="salvarValor($event.target.value)"
+(keyup)="onKeyUp($event)"/>
 
-<input (keyup)="onKeyUp($event)"  type="text" name="" value="">
+trocado por variavável local
+-->
+
+<input  type="text"
+(keyup.enter)="salvarValor(campoInput.value)"
+(blur)="salvarValor(campoInput.value)"
+(keyup)="onKeyUp($event)"
+#campoInput/>
+
 
 <p>Valor atual: {{ valorAtual }}</p>
+
+<p>Valor salvo: {{ valorSalvo }}</p>
+
+
+<hr>
+
+<br>
+
+<span
+(mouseover)="onMouseOverOut()"
+(mouseout)="onMouseOverOut()"
+[class.highlight]="isMouseOver"
+>Passe o mouse sobre mim</span>
 
 </section>
