@@ -8,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class AlertsComponent implements OnInit {
 
 
+valorAtual: string;
 
 
-botaoClicado(){
-  alert('Botão clicado')
-}
+  botaoClicado() {
+    alert('Botão clicado')
+  }
+
+
+  onKeyUp(evento: KeyboardEvent) {
+     this.valorAtual = ((<HTMLInputElement>evento.target).value);    
+  }
+
   constructor() { }
 
   ngOnInit() {
