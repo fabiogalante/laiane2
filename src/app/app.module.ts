@@ -8,13 +8,20 @@ import { AlertsComponent } from './alerts/alerts.component';
 
 
 import { AlertModule } from 'ngx-bootstrap';
+import { TwowayDataBindingComponent } from './twoway-data-binding/twoway-data-binding.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlertsComponent
+    AlertsComponent,
+    TwowayDataBindingComponent,
+    DataBindingComponent,
+    InputPropertyComponent,
   ],
   imports: [
     BrowserModule,

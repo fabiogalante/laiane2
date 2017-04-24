@@ -1,0 +1,23 @@
+<section class="event-binding">
+
+  <article>
+    <h3>Two-way data binding</h3>
+  </article>
+
+
+  <div>
+    <input type="text" [value]="nome" (input)="nome = $event.target.value" />
+    <hr>
+    <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
+    <hr>
+    <input type="text" [(ngModel)]="nome" />
+
+    <p> [ngModel] - Representação de uma entidade </p>
+  </div>
+
+
+  <p>Você digitou: {{ nome }}</p>
+
+  <br><br>
+
+</section>
